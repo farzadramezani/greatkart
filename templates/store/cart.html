@@ -65,12 +65,12 @@
         </td>
         <td> 
             <div class="price-wrap"> 
-                <var class="price"> تومان {{cart_item.sub_total}}</var> 
+                <var class="price">  {{cart_item.sub_total}}تومان</var> 
                 <small class="text-muted"> تومان {{ cart_item.product.price }}</small> 
             </div> <!-- price-wrap .// -->
         </td>
         <td class="text-right"> 
-        <a href="{% url 'remove_cart_item' cart_item.product.id  cart_item.id%}" onclick="return confirm('آیا از حذف محصول انتخاب شده مطمئنید؟')" class="btn btn-danger"> Remove</a>
+        <a href="{% url 'remove_cart_item' cart_item.product.id  cart_item.id%}" onclick="return confirm('آیا از حذف محصول انتخاب شده مطمئنید؟')" class="btn btn-danger"> حذف</a>
         </td>
     </tr>
     {% endfor %}
@@ -81,26 +81,26 @@
         </aside> <!-- col.// -->
         <aside class="col-lg-3">
     
-            <div class="card">
+            <div class="card"  align="right">
             <div class="card-body">
                 <dl class="dlist-align">
-                  <dt>Total price:</dt>
-                  <dd class="text-right">تومان {{total}}</dd>
+                  <dt>جمع مبلغ:</dt>
+                  <dd class="text-right"> {{total}} تومان</dd>
                 </dl>
                 <dl class="dlist-align">
-                  <dt>Tax:</dt>
-                  <dd class="text-right">تومان {{tax}}</dd>
+                  <dt>مالیات:</dt>
+                  <dd class="text-right"> {{tax}} تومان</dd>
                 </dl>
                 <dl class="dlist-align">
-                  <dt>Grand Total:</dt>
-                  <dd class="text-right text-dark b"><strong>تومان {{grand_total}}</strong></dd>
+                  <dt>مبلغ نهایی:</dt>
+                  <dd class="text-right text-dark b"><strong> {{grand_total}} تومان</strong></dd>
                 </dl>
                 <hr>
                 <p class="text-center mb-3">
                     <img src="{% static './images/misc/payments.png'%}" height="26">
                 </p>
-                <a href="./place-order.html" class="btn btn-primary btn-block"> Checkout </a>
-                <a href="{% url 'store'%}" class="btn btn-light btn-block">Continue Shopping</a>
+                <a href="{% url 'checkout' %}" class="btn btn-primary btn-block"> ثبت سفارش </a>
+                <a href="{% url 'store'%}" class="btn btn-light btn-block">ادامه خرید</a>
             </div> <!-- card-body.// -->
             </div> <!-- card.// -->
     

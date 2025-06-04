@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {%block content%} 
 <!-- ========================= SECTION PAGETOP ========================= -->
-<section class="section-pagetop bg">
-    <div class="container">
+<section class="section-pagetop bg" >
+    <div class="container" align="right">
         {%if 'search' in request.path%}
         <h2 class="title-page">نتایج جستجو</h2>
         {%else%}
@@ -13,7 +13,7 @@
     </section>
     <!-- ========================= SECTION INTRO END// ========================= -->
      <!-- ========================= SECTION CONTENT ========================= -->
-<section class="section-content padding-y">
+<section class="section-content padding-y" align="right">
     <div class="container">
     
     <div class="row">
@@ -24,7 +24,7 @@
             <header class="card-header">
                 <a href="#" data-toggle="collapse" data-target="#collapse_1" aria-expanded="true" class="">
                     <i class="icon-control fa fa-chevron-down"></i>
-                    <h6 class="title">Categories</h6>
+                    <h6 class="title">دسته بندی ها</h6>
                 </a>
             </header>
             <div class="filter-content collapse show" id="collapse_1" style="">
@@ -44,7 +44,7 @@
             <header class="card-header">
                 <a href="#" data-toggle="collapse" data-target="#collapse_4" aria-expanded="true" class="">
                     <i class="icon-control fa fa-chevron-down"></i>
-                    <h6 class="title">Sizes </h6>
+                    <h6 class="title">سایزبندی </h6>
                 </a>
             </header>
             <div class="filter-content collapse show" id="collapse_4" style="">
@@ -76,7 +76,7 @@
             <header class="card-header">
                 <a href="#" data-toggle="collapse" data-target="#collapse_3" aria-expanded="true" class="">
                     <i class="icon-control fa fa-chevron-down"></i>
-                    <h6 class="title">Price range </h6>
+                    <h6 class="title">فیلتر قیمت </h6>
                 </a>
             </header>
             <div class="filter-content collapse show" id="collapse_3" style="">
@@ -84,20 +84,17 @@
                     
                     <div class="form-row">
                     <div class="form-group col-md-6">
-                      <label>Min</label>
+                      <label>حداقل</label>
                       <!-- <input class="form-control" placeholder="$0" type="number"> -->
                           <select class="mr-2 form-control">
-                            <option value="0">$0</option>
-                            <option value="50">$50</option>
-                            <option value="100">$100</option>
-                            <option value="150">$150</option>
-                            <option value="200">$200</option>
-                            <option value="500">$500</option>
-                            <option value="1000">$1000</option>
+                            <option value="0">۰ تومان</option>
+                            <option value="50">پانصد هزار تومان</option>
+                            <option value="500">۱ میلیون تومان</option>
+                            <option value="1000">۱۰ میلیون تومان</option>
                         </select>
                     </div>
                     <div class="form-group text-right col-md-6">
-                      <label>Max</label>
+                      <label>حداکثر</label>
                           <select class="mr-2 form-control">
                             <option value="50">$50</option>
                             <option value="100">$100</option>
@@ -109,7 +106,7 @@
                         </select>
                     </div>
                     </div> <!-- form-row.// -->
-                    <button class="btn btn-block btn-primary">Apply</button>
+                    <button class="btn btn-block btn-primary">فیلتر</button>
                 </div><!-- card-body.// -->
             </div>
         </article> <!-- filter-group .// -->
